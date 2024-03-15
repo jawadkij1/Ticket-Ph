@@ -6,9 +6,20 @@
     <title>Ticket</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    
+.relative-container::after {
+  content: '';
+  position: absolute;
+  right: 450px;
+  top: 120px;
+  bottom: 20px;
+  border-right: 2px dashed green; 
+}
+    </style>
 
   </head>
- <body class="mx-auto my-auto">
+ <body class="mx-0 my-auto">
     <header class="container mx-auto flex justify-between items-center px-8 py-4">
         <h1 class="text-4xl font-extrabold text-black">P-Ticket</h1>
         <nav class="flex space-x-14 items-center"> 
@@ -22,60 +33,322 @@
           <img class="w-8 h-8 rounded-lg" src="images/bus-icon.png" alt="Bus Icon">
         </div>
       </header>
-      <main class="-my-0 -mt-16 relative ">
-        <div class="inline-flex items-start justify-center px-52 pt-16 pb-32 absolute bg-gradient-to-b from-black to-black rounded-3xl" style="width: 1171px; height: 550px; left: 134px; top: 134px; background-image:url('Images/banner.png');">
-          <div class="inline-flex flex-col space-y-8 items-center justify-end" style="width: 742px; height: 352px;">
-            <div class="flex flex-col space-y-4 items-center justify-end" style="width: 742px; height: 248px;">
+      <main>
+        <div class="bg-gradient-to-b from-black to-black h-[550px] rounded-3xl bg-cover bg-no-repeat" style="background-image:url('Images/banner.png');">
+          <div class="flex flex-col space-y-8 items-center justify-center h-full">
+            <div class="flex flex-col items-center justify-center">
               <p class="text-5xl text-white font-extrabold leading-10 text-center">End-to-End Travel with <br> <span class="text-green-500">P Paribahan</span></p>
-              <p class="text-lg leading-loose text-center text-white" style="width: 691px;">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+              <p class="text-lg leading-loose text-center text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
             </div>
             <div class="inline-flex items-center justify-center px-8 py-5 bg-green-600 rounded-xl">
               <button class="text-xl font-bold text-center text-black">Buy Tickets</button>
             </div>
           </div>
         </div>
-        <section class="flex space-x-6 items-center justify-end absolute" style="width: 971px; height: 138px; left: 235px; top:580px;">
-            <!-- Stat Card 1: Registered Users -->
-            <div class="w-80 h-full flex flex-col justify-center py-8 pl-8 pr-14 bg-white border rounded-3xl border-green-600">
-              <div class="flex items-center space-x-4">
-                <img class="w-16 h-16 rounded-lg" src="images/people.png" alt="Registered Users"/>
-                <div>
-                  <p class="text-4xl font-bold text-black">500K+</p>
-                  <p class="text-lg text-black text-opacity-60">Registered users</p>
-                </div>
+        <section class="flex space-x-6 items-center justify-center mt-[-4rem]">
+          <!-- Stat Card 1: Registered Users -->
+          <div class="w-80 flex flex-col justify-center py-8 pl-8 pr-14 bg-white border rounded-3xl border-green-600">
+            <div class="flex items-center space-x-4">
+              <img class="w-16 h-16 rounded-lg" src="images/people.png" alt="Registered Users"/>
+              <div>
+                <p class="text-4xl font-bold text-black">500K+</p>
+                <p class="text-lg text-black text-opacity-60">Registered users</p>
               </div>
             </div>
-          
-            <!-- Stat Card 2: Tickets Sold -->
-            <div class="w-80 h-full flex flex-col justify-center py-8 pl-8 pr-12 bg-white border rounded-3xl border-green-600">
-              <div class="flex items-center space-x-4">
-                <img class="w-16 h-16 rounded-lg" src="images/ticket-cupon.png" alt="Tickets Sold"/>
-                <div>
-                  <p class="text-4xl font-bold text-black">1.7M</p>
-                  <p class="text-lg text-black text-opacity-60">Tickets sold</p>
-                </div>
+          </div>
+          <!-- Stat Card 2: Tickets Sold -->
+          <div class="w-80 flex flex-col justify-center py-8 pl-8 pr-12 bg-white border rounded-3xl border-green-600">
+            <div class="flex items-center space-x-4">
+              <img class="w-16 h-16 rounded-lg" src="images/ticket-cupon.png" alt="Tickets Sold"/>
+              <div>
+                <p class="text-4xl font-bold text-black">1.7M</p>
+                <p class="text-lg text-black text-opacity-60">Tickets sold</p>
               </div>
             </div>
-          
-            <!-- Stat Card 3: Rental Partners -->
-            <div class="w-80 h-full flex flex-col justify-center py-8 pl-8 pr-16 bg-white border rounded-3xl border-green-600">
-              <div class="flex items-center space-x-4">
-                <img class="w-16 h-16 rounded-lg" src="images/stoppage.png" alt="Rental Partners"/>
-                <div>
-                  <p class="text-4xl font-bold text-black">80K</p>
-                  <p class="text-lg text-black text-opacity-60">Rental partners</p>
-                </div>
+          </div>
+          <!-- Stat Card 3: Rental Partners -->
+          <div class="w-80 flex flex-col justify-center py-8 pl-8 pr-16 bg-white border rounded-3xl border-green-600">
+            <div class="flex items-center space-x-4">
+              <img class="w-16 h-16 rounded-lg" src="images/stoppage.png" alt="Rental Partners"/>
+              <div>
+                <p class="text-4xl font-bold text-black">80K</p>
+                <p class="text-lg text-black text-opacity-60">Rental partners</p>
               </div>
             </div>
-          </section>
-      </main>
+          </div>
+        </section>
+        <section class=" mx-auto my-8">
+          <h1 class="text-4xl font-extrabold text-center mb-6">
+            Best offers for you
+          </h1>
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 gap-6">
+              <!-- First offer card (Yellow) -->
+              <div class="bg-yellow-400 rounded-3xl p-6 relative" style="height: 220px;">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <p class="text-4xl font-extrabold">15% OFF</p>
+                    <p class="text-lg">on your next purchase</p>
+                    <p class="text-sm font-light">use by January 2024</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <p class="text-lg font-semibold">NEW15</p>
+                    <p class="text-xs font-medium">Coupon Code</p>
+                  </div>
+                </div>
+                <div class="absolute inset-x-0 top-0 h-3 rounded-b-full"></div>
+                <div class="absolute inset-x-0 bottom-0 h-3 rounded-t-full"></div>
+                <div class="absolute inset-0 m-auto border-l-2 border-dashed border-white h-full" style="width: 2px;"></div>
+              </div>
+              
+              <!-- Second offer card (Pink) -->
+              <div class="bg-pink-300 rounded-3xl p-6 relative" style="height: 220px;">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <p class="text-4xl font-extrabold">20% OFF</p>
+                    <p class="text-lg">on your next purchase</p>
+                    <p class="text-sm font-light">use by January 2024</p>
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <p class="text-lg font-semibold">Couple20</p>
+                    <p class="text-xs font-medium">Coupon Code</p>
+                  </div>
+                </div>
+                <div class="absolute inset-x-0 top-0 h-3 rounded-b-full"></div>
+                <div class="absolute inset-x-0 bottom-0 h-3 rounded-t-full"></div>
+                <div class="absolute inset-0 m-auto border-l-2 border-dashed border-white h-full" style="width: 2px;"></div>
+              </div>
+              <section class=" my-5 flex items-center mx-56 w-96 justify-center ">
+                <div class="flex items-center justify-center  px-8 py-5 border rounded-xl border-green-600">
+                  <p class="text-xl text-center font-bold text-green-600">See All Offers</p>
+                </div>
+              </section>
 
-      <!-- Stats -->
-     
+
+           </section>
+
+  
+        
+         <section class="my-10 mx-auto bg-gray-50 border rounded-tl-3xl  relative rounded-tr-3xl border-green-600 h-auto" >
+          <div class="flex flex-col items-center justify-center relative-container">
+              <p class="text-4xl font-bold text-center text-black">P.H Paribahan</p>
+              <p class="text-lg leading-loose text-center text-black text-opacity-60">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+          </div>
       
-    
-    
- 
+          <div class="bg-white rounded-xl overflow-hidden">
+            <div class="mx-40 my-20 flex items-center justify-between">
+              <div class="flex items-center">
+                  <img class="" src="images/bus-logo.png" alt="Bus Logo">
+                  <div class="">
+                      <h3 class="text-2xl my-8 font-bold">Marcedes-Paribahan</h3>
+                      <p class="text-xl px-1 font-normal">Coach-009-WEB ! AC_Business</p>
+                  </div>
+              </div>
+              <div class="w-44 h-14 mr-80 ">
+                  <div class="flex items-center justify-center flex-1 h-full px-4 py-3.5 bg-green-600 bg-opacity-10 rounded-xl">
+                      <div class="flex space-x-2 items-center justify-end flex-1 h-full">
+                          <img class="w-1/5 h-full rounded-lg" src="images/seat-green-filled.png" />
+                          <p class="text-lg font-medium text-green-600">40 Seats left</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <div class=" rounded-3xl mx-40 w-96 h-auto">
+              <div class="flex flex-col space-y-5 items-start justify-start" style="width: 755px; height: 194px;">
+                  <div class="flex justify-between items-center" style="width: 755px; height: 27px;">
+                      <p class="text-xl font-semibold text-black text-opacity-60">Route</p>
+                      <p class="text-xl font-semibold text-black">Dhaka - Sylhet</p>
+                  </div>
+                  <div class="border-black border-opacity-20" style="width: 744px; height: 1px;"></div>
+                  <div class="flex justify-between items-center" style="width: 746px; height: 27px;">
+                      <p class="text-xl font-semibold text-black text-opacity-60">Departure Time</p>
+                      <p class="text-xl font-semibold text-black">9:00 PM</p>
+                  </div>
+                  <div class="border-black border-opacity-20" style="width: 744px; height: 1px;"></div>
+                  <div class="flex justify-between items-center" style="width: 744px; height: 56px;">
+                      <div class="w-56 h-full">
+                          <div class="flex items-center justify-center flex-1 h-full px-4 pt-5 pb-4 bg-black bg-opacity-5 rounded-xl">
+                              <p class="text-base font-medium text-black text-opacity-80">Boarding Point - Laxmipur</p>
+                          </div>
+                      </div>
+                      <div class="w-56 h-full">
+                          <div class="flex items-center justify-center flex-1 h-full px-6 pt-5 pb-4 bg-black bg-opacity-5 rounded-xl">
+                              <p class="text-base font-medium text-black text-opacity-80">Dropping Point- Bogura</p>
+                          </div>
+                      </div>
+                      <div class="w-56 h-full">
+                          <div class="flex items-center justify-center flex-1 h-full px-11 pt-5 pb-4 bg-black bg-opacity-5 rounded-xl">
+                              <p class="text-base font-medium text-black text-opacity-80">Est. Time - 11 Hour</p>
+                          </div>
+                       <!-- Add an empty div for the dashed line -->
+              <div class=" bg-white absolute right-0 top-0 bottom-0 w-0 border-r border-dashed"></div>
 
- </body>
-</html>
+              <!-- after the dashed line add taka section -->
+              <div class="flex flex-col space-y-6  items-center justify-end ">
+                <img class="w-12 h-12 rounded-lg" src="images/fare.png" />
+                <p class="leading-10 text-black text-center">550 Taka<br/>Per Seat</p>
+              </div>
+
+          </div>
+        
+
+      </section>
+
+      <section class="my-8 flex overflow-hidden justify-between">
+        <!-- Seat section -->
+        <div class="flex flex-col space-y-4">
+          <div id="seat-selection" class="bg-gray-50 rounded-3xl p-8">
+                <!-- Title and lines -->
+                <div class="h-px fle bg-black bg-opacity-20"></div>
+                <p class="text-2xl font-extrabold text-black">Select Your Seat</p>
+                <div class="h-px bg-black bg-opacity-20"></div>
+                
+                <!-- Seat availability legend -->
+                <div class="flex space-x-40 mt-2">
+                    <div class="flex items-center space-x-2">
+                        <img class="w-7 h-7 rounded-lg" src="images/seat-gray.png" alt="Seat" />
+                        <p class="text-lg font-medium text-black text-opacity-50">Available</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img class="w-7 h-7 rounded-lg" src="images/seat-green-filled.png" alt="Seat" />
+                        <p class="text-lg font-medium text-green-600">Selected</p>
+                    </div>
+                </div>
+                
+                <!-- Seat rows and selection -->
+                <div class="grid grid-cols-4 gap-4 mt-4">
+                    <!-- Seat labels -->
+                    <div class="flex flex-col space-y-4">
+                        <p class="text-lg font-medium text-black text-opacity-50">A</p>
+                        <p class="text-lg font-medium text-black text-opacity-50">B</p>
+                        <p class="text-lg font-medium text-black text-opacity-50">C</p>
+                        <p class="text-lg font-medium text-black text-opacity-50">D</p>
+                        <p class="text-lg font-medium text-black text-opacity-50">E</p>
+                        <p class="text-lg font-medium text-black text-opacity-50">F</p>
+                    </div>
+                    
+                    <!-- Seats -->
+                    <div class="grid grid-cols-4 gap-32">
+                        <div class="flex flex-col space-y-4">
+                             <button class="seat available text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">A1</button>  
+                        <button class="seat available text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">A2</button>  
+                        <button class="seat available text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">A3</button>  
+                        <button class="seat available text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">A4</button>  
+                        <button class="seat available text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">A5</button>  
+                        <button class="seat available text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">A6</button> 
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <button id="seat-B1" class="text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">B1</button>  
+                            <button id="seat-B2" class="text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">B2</button>  
+                            <button id="seat-B3" class="text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">B3</button>  
+                            <button id="seat-B4" class="text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">B4</button>  
+                            <button id="seat-B5" class="text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">B5</button>  
+                            <button id="seat-B6" class="text-lg font-medium px-11 bg-gray-100 text-black text-opacity-50">B6</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Form section -->
+        <div class="flex bg-gray-50 flex-col mx-3 rounded-xl space-y-4 items-center justify-end ">
+            <div class="bg-white absolute right-0 top-0 bottom-0 w-0 border-r border-dashed"></div>
+            <p class="text-2xl font-extrabold mt-8 text-black">Select Your Seat</p>
+            <!-- Your form section content here -->
+            <div class="bg-gray-50 rounded-xl p-8">
+                <div class="inline-flex space-x-32 items-center justify-start w-full h-5">
+                    <p class="text-base font-medium text-black">Seat</p>
+                    <p class="text-base font-medium text-black">Class</p>
+                    <p class="text-base font-medium text-black">Price</p>
+                </div>
+                <div class="w-full h-0.5 border-black border-opacity-20"></div>
+                <div class="inline-flex space-x-28 items-center justify-end w-full h-5">
+                    <p class="text-base text-black text-opacity-60">A2</p>
+                    <p class="text-base text-black text-opacity-60">Economy</p>
+                    <p class="text-base text-black text-opacity-60">550</p>
+                </div>
+                <!-- Additional seats can be added here -->
+                <div class="w-full h-0.5 border-black border-opacity-20"></div>
+                <div class="inline-flex space-x-52 items-center justify-end w-full h-5">
+                    <p class="text-base font-medium text-black">Total Price</p>
+                    <p class="text-base font-medium text-black">BDT 1100</p>
+                </div>
+                <!-- Additional information can be added here -->
+                <div class="flex flex-col space-y-6 items-center justify-end w-full">
+                    <div class="inline-flex space-x-32 items-center justify-end w-full py-2 pl-5 pr-2 bg-white rounded-xl">
+                        <p class="text-sm text-black text-opacity-40">Have any coupon?</p>
+                        <div class="w-20 h-full apply-button">
+                            <div class="flex items-center justify-center flex-1 h-full px-4 py-2.5 bg-green-400 rounded-lg">
+                                <p class="text-base font-semibold text-white">Apply</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inline-flex space-x-52 items-center justify-end w-full">
+                        <p class="text-base font-medium text-black">Grand Total</p>
+                        <p class="text-base font-medium text-black">BDT 1100</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Passenger details -->
+            <div class="flex flex-col space-y-4 items-start">
+              <p class="text-xl  font-semibold">Passenger Name</p>
+              <input id="passenger-name" type="text" placeholder="Passenger Name" class="input input-bordered w-full max-w-xs" />
+              <p class="text-xl  font-semibold">Phone Number</p>
+              <input id="phone-number" type="tel" placeholder="Phone Number" class="input input-bordered w-full max-w-xs" />
+              <p class="text-xl  font-semibold">Email ID</p>
+              <input id="email" type="email" placeholder="Email ID" class="input input-bordered w-full max-w-xs" />
+            <!-- Next button -->
+            <div id="next-button" class="flex items-center justify-center px-48 py-5 bg-green-400 rounded-2xl">
+                <p class="text-xl font-extrabold text-center text-white">Next</p>
+            </div>
+            <!-- Additional links -->
+            <div class="flex space-x-11 items-center justify-end">
+                <p class="text-base underline text-black text-opacity-60">Terms and Conditions</p>
+                <p class="text-base underline text-black text-opacity-60">Cancellation Policy</p>
+            </div>
+        </div>
+    </section>
+
+   
+      
+      
+           
+    <div id="" class="flex flex-col space-y-8 items-center justify-end pl-12 pr-9 py-14 bg-white rounded-2xl" style="width: 718px; height: 481px; ">
+      <img class="w-1/6 h-24 rounded-lg" src="images/success.png" />
+      <p class="text-2xl font-bold text-center text-green-500" style="width: 631px;">SUCCESS</p>
+      <p class="text-xl text-center text-gray-700">Thank you for Booking Our Bus Seats. <br/>We are working hard to find the best service and deals for you. <br/>Shortly you will find a confirmation in your email.</p>
+      <div class="w-72 h-14">
+          <div class="flex items-center justify-end flex-1 h-full pl-28 pr-20 py-4 bg-green-500 rounded-full">
+              <p class="flex-1 h-full text-xl font-medium text-white">Continue</p>
+          </div>
+      </div>
+  </div>
+        
+
+
+   </main>  
+
+
+
+
+
+   <script>
+    // Function to handle apply button click
+    document.querySelector('.apply-button').addEventListener('click', function() {
+        // Add your coupon applying logic here
+        alert('Coupon applied!');
+    });
+
+    // Function to handle next button click
+    document.getElementById('next-button').addEventListener('click', function() {
+        // Add your validation logic here
+        // For example, you can check if the required fields are filled
+        // If validation passes, you can proceed to the next step
+        alert('');
+    });
+</script>
+      </body>
+      </html>
+     
+     
