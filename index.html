@@ -12,7 +12,7 @@
 </head>
 <body class="mx-32 my-auto">
   <header class="mx-auto flex justify-between items-center px-8 py-4">
-    <h1 class="text-4xl font-extrabold text-black">P-Ticket</h1>
+    <h1 class="text-4xl font-extrabold text-black">J-Ticket</h1>
     <nav class="flex space-x-14 items-center"> 
       <a href="#" class="text-lg font-medium text-black text-opacity-70">Home</a>
       <a href="#" class="text-lg font-medium text-black text-opacity-70">About</a>
@@ -28,7 +28,7 @@
     <div class="bg-gradient-to-b from-black to-black h-[550px] rounded-3xl bg-cover bg-no-repeat" style="background-image:url('./images/banner.png');">
       <div class="flex flex-col space-y-8 items-center justify-center h-full">
         <div class="flex flex-col items-center justify-center">
-          <p class="text-5xl text-white font-extrabold leading-10 text-center">End-to-End Travel with <br> <span class="text-green-500">P Paribahan</span></p>
+          <p class="text-5xl text-white font-extrabold leading-10 text-center">End-to-End Travel with <br> <span class="text-green-500">Marcedes Paribahan</span></p>
           <p class="text-lg leading-loose text-center text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
         </div>
         <div class="inline-flex items-center justify-center px-8 py-5 bg-green-600 rounded-xl">
@@ -96,12 +96,12 @@
           <div class="bg-pink-300 rounded-3xl p-6 relative" style="height: 220px;">
             <div class="flex justify-between items-center">
               <div>
-                <p class="text-4xl font-extrabold">20% OFF</p>
+                <p class="text-4xl font-extrabold">40% OFF</p>
                 <p class="text-lg">on your next purchase</p>
                 <p class="text-sm font-light">use by January 2024</p>
               </div>
               <div class="flex flex-col items-center">
-                <p class="text-lg font-semibold">Couple20</p>
+                <p class="text-lg font-semibold">Couple40</p>
                 <p class="text-xs font-medium">Coupon Code</p>
               </div>
             </div>
@@ -283,8 +283,8 @@
                   <input id="coupon-code" type="text" placeholder=" Have Any Coupon" class="input input-bordered w-full max-w-xs" />
                   <div class="w-20 h-full apply-button">
                       <div class="flex items-center justify-center flex-1 h-full px-4 py-2.5 rounded-lg">
-                        <button id="apply-coupon" onclick="applyCoupon()" class="text-base btn btn-accent font-semibold text-white">Apply</button>
-
+                        <button id="apply-btn" onclick="applyCoupon()" class="text-base btn btn-accent font-semibold text-white">Apply</button>
+                        
                       </div>
                   </div>
               </div>
@@ -317,22 +317,22 @@
 </section>
 
 
-  <footer class="footer p-10 bg-base-300 text-base-content">
-    <nav>
+  <footer class="footer p-10 bg-black text-base-content">
+    <nav class="text-white">
       <h6 class="footer-title">Services</h6> 
       <a class="link link-hover">Branding</a>
       <a class="link link-hover">Design</a>
       <a class="link link-hover">Marketing</a>
       <a class="link link-hover">Advertisement</a>
     </nav> 
-    <nav>
+    <nav class="text-white">
       <h6 class="footer-title">Company</h6> 
       <a class="link link-hover">About us</a>
       <a class="link link-hover">Contact</a>
       <a class="link link-hover">Jobs</a>
       <a class="link link-hover">Press kit</a>
     </nav> 
-    <nav>
+    <nav class="text-white">
       <h6 class="footer-title">Social</h6> 
       <div class="grid grid-flow-col gap-4">
         <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
@@ -346,72 +346,81 @@
    
   </main>
 
-<script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    // Your code here
-});
-
-let selectedSeats = [];
-let totalPrice = 0;
-let grandTotal = 0;
-
-function selectSeat(seatElement, seatNumber, seatClass, seatPrice) {
-    // Toggle seat selection
-    seatElement.classList.toggle('bg-green-600');
-    seatElement.classList.toggle('text-white');
-
-    // Check if seat is selected
-    const isSeatSelected = seatElement.classList.contains('bg-green-600');
-
-    // Add or remove seat from selected seats
-    if (isSeatSelected) {
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById('apply-btn').addEventListener('click', applyCoupon);
+    });
+    
+    let selectedSeats = [];
+    let totalPrice = 0;
+    let grandTotal = 0;
+    
+    function selectSeat(seatElement, seatNumber, seatClass, seatPrice) {
+      seatElement.classList.toggle('bg-green-600');
+      seatElement.classList.toggle('text-white');
+  
+      const isSeatSelected = seatElement.classList.contains('bg-green-600');
+    
+      // Add or remove seat from selected seats
+      if (isSeatSelected) {
         selectedSeats.push({ seatNumber, seatClass, seatPrice });
-    } else {
+      } else {
         selectedSeats = selectedSeats.filter(seat => seat.seatNumber !== seatNumber);
-    }
-
-    // Update selected seats display
-    const seatsDiv = document.getElementById('selected-seats');
-    const classesDiv = document.getElementById('selected-class');
-    const pricesDiv = document.getElementById('selected-price');
-
-    // Clear previous entries
-    seatsDiv.innerHTML = '';
-    classesDiv.innerHTML = '';
-    pricesDiv.innerHTML = '';
-
-    // Add new entries
-    selectedSeats.forEach(seat => {
+      }
+    
+      //  seats display
+      const seatsDiv = document.getElementById('selected-seats');
+      const classesDiv = document.getElementById('selected-class');
+      const pricesDiv = document.getElementById('selected-price');
+    
+      seatsDiv.innerHTML = '';
+      classesDiv.innerHTML = '';
+      pricesDiv.innerHTML = '';
+    
+      
+      selectedSeats.forEach(seat => {
         const seatP = document.createElement('p');
         seatP.textContent = seat.seatNumber;
         seatP.className = 'text-base my-2 font-medium text-black';
         seatsDiv.appendChild(seatP);
-
+    
         const classP = document.createElement('p');
         classP.textContent = seat.seatClass;
         classP.className = 'text-base my-2 font-medium text-black';
         classesDiv.appendChild(classP);
-
+    
         const priceP = document.createElement('p');
         priceP.textContent = seat.seatPrice;
         priceP.className = 'text-base my-2 font-medium text-black';
         pricesDiv.appendChild(priceP);
-    });
-
-    // Calculate total price
-    totalPrice = selectedSeats.reduce((total, seat) => total + seat.seatPrice, 0);
-    document.getElementById('total-price').textContent = `BDT ${totalPrice}`;
-
-    // Calculate grand total
-    const couponCode = document.getElementById('coupon-code').value;
-    if (couponCode === 'Jawad') {
-        grandTotal = totalPrice * 0.6;
-    } else {
+      });
+    
+      // Total price
+      totalPrice = selectedSeats.reduce((total, seat) => total + seat.seatPrice, 0);
+      document.getElementById('total-price').textContent = `BDT ${totalPrice}`;
+    
+      //  grand total
+      const couponCode = document.getElementById('coupon-code').value;
+      if (couponCode === 'Couple40') {
+        grandTotal = totalPrice * 0.4;
+      } else {
         grandTotal = totalPrice;
+      }
+      document.getElementById('grand-total').textContent = `BDT ${grandTotal}`;
     }
-    document.getElementById('grand-total').textContent = `BDT ${grandTotal}`;
-}
-
-</script>
+    
+    function applyCoupon() {
+      const couponCode = document.getElementById('coupon-code').value;
+      //Coupoun Code
+      if (couponCode === 'Couple40') {
+        grandTotal = totalPrice * 0.4;
+      }
+      
+      else {
+        grandTotal = totalPrice;
+      }
+      document.getElementById('grand-total').textContent = `BDT ${grandTotal}`;
+    }
+    </script>
 </body>
 </html>
